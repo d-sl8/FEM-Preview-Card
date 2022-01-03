@@ -1,0 +1,151 @@
+//## Colors
+
+//### Primary
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan: hsl(178, 100%, 50%);
+
+//### Neutral
+
+$vdb-mbg: hsl(217, 54%, 11%); //MAIN BACKGROUND
+$vdb-cbg: hsl(216, 50%, 16%); // CARD BACKGROUND
+$vdb-line: hsl(215, 32%, 27%); // LINE
+$white: hsl(0, 0%, 100%);
+
+
+body {
+    background-color: $vdb-mbg;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    color: $soft-blue;
+    text-align: center; 
+}
+
+.container {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 625px;
+    background-color: $vdb-cbg;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 30px 30px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+}
+
+.card-image {
+    //background-color: $white;
+    position: relative;
+}
+.eye-image {
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    opacity: 0;
+}
+
+.card-image:hover .eye-image {
+    opacity: 1;
+    transform: rotate(180deg);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.card-image:hover img.eq-image {
+    opacity: 0.5;
+}
+
+.card-body {
+    text-align: left;
+
+    h2 {
+        color: $white;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-weight: 300;
+    }
+}
+
+.card-number {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img {
+        width: 10px;
+        height: auto;
+        margin-right: 10px;
+
+    }
+}
+
+.card-number img.clock {
+    width: 17px;
+    height: auto;
+}
+
+.card-number .eth {
+    color: $cyan;
+    font-weight: 600;
+}
+
+.card-footer {
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid $vdb-line;
+    display: flex;
+    img {
+        width: 35px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        &:hover{
+            transform: rotate(360deg);
+            transition: all 0.6s ease-in-out;
+        }
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $cyan;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
